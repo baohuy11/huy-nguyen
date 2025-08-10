@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { useState } from 'react';
+import './App.css';
+import Home from './pages/Homepage/Home.jsx';
+import Blogs from './pages/Blogs/Blogs.jsx';
+import Works from './pages/Works/Works.jsx';
+import Layout from './components/Layout/Layout.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
+// Main App component
+export default function App() {
+  // Use 'homepage' as the initial page state
+  const [currentPage, setCurrentPage] = useState('homepage');
+
+  // A function to render the correct component based on the current page state
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'homepage':
+        return <Home />;
+      case 'blogs':
+        return <Blogs />;
+      case 'works':
+        return <Works />;
+      default:
+        return <Home />; // A default case is good practice
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+      {renderPage()}
+    </Layout>
+  );
 }
-
-export default App

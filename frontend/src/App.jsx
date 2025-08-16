@@ -5,6 +5,7 @@ import Home from './pages/Homepage/Home.jsx';
 import Blogs from './pages/Blogs/Blogs.jsx';
 import Works from './pages/Works/Works.jsx';
 import Layout from './components/Layout/Layout.jsx';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 // Main App component
 export default function App() {
@@ -26,8 +27,10 @@ export default function App() {
   };
 
   return (
-    <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-      {renderPage()}
-    </Layout>
+    <ThemeProvider>
+      <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+        {renderPage()}
+      </Layout>
+    </ThemeProvider>
   );
 }

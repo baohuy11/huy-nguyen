@@ -15,7 +15,7 @@ export default function Layout({ currentPage, setCurrentPage, children }) {
         </main>
         <footer className="bg-white dark:bg-gray-800 shadow-sm mt-auto">
           <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-            <p className="text-gray-600 dark:text-gray-400">&copy; 2023 Huy Nguyen. All rights reserved.</p>
+            <p className="text-gray-600 dark:text-gray-400">&copy; 2025 Nguyen Phung Bao Huy. All rights reserved.</p>
             <div className="flex space-x-4">
               <a href="https://x.com/Akira_npbh" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 dark:hover:text-white">
                 <Twitter size={24} />

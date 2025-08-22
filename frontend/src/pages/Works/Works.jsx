@@ -17,7 +17,7 @@ const projects = [
 
 export default function Works() {{
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-5xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 dark:text-white">My Work</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (

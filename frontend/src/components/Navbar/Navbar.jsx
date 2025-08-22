@@ -1,6 +1,4 @@
 import React from 'react';
-import { useTheme } from '../../contexts/ThemeContext';
-import { Sun, Moon } from 'lucide-react';
 
 // Helper component for the navigation links
 const NavLink = ({ pageName, currentPage, setCurrentPage, children }) => (
@@ -18,10 +16,10 @@ const NavLink = ({ pageName, currentPage, setCurrentPage, children }) => (
 );
 
 export default function Navbar({ currentPage, setCurrentPage }) {
-  const { theme, toggleTheme } = useTheme();
+  
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-800 shadow-sm fixed w-full top-0 z-50">
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left side: Your name or brand */}
         <div className="flex items-center">
@@ -34,10 +32,10 @@ export default function Navbar({ currentPage, setCurrentPage }) {
         <div className="flex space-x-4 items-center">
           <NavLink pageName="homepage" currentPage={currentPage} setCurrentPage={setCurrentPage}>Homepage</NavLink>
           <NavLink pageName="blogs" currentPage={currentPage} setCurrentPage={setCurrentPage}>Blogs</NavLink>
-          <NavLink pageName="works" currentPage={currentPage} setCurrentPage={setCurrentPage}>Works</NavLink>
-          <button onClick={toggleTheme} className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
+          <NavLink pageName="works" currentPage={currentPage} setCurrentPage={setCurrentPage}>Projects</NavLink>
+          <a href="/NGUYEN-PHUNG-BAO-HUY-RESUME.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg transition-colors duration-300 text-gray-700 hover:text-indigo-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+            CV
+          </a>
         </div>
       </nav>
     </header>

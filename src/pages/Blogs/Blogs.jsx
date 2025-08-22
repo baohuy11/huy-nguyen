@@ -15,7 +15,7 @@ const blogPosts = [
 
 export default function Blogs() {{
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-5xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Blog Posts</h2>
       <div className="space-y-12">
         {blogPosts.map((post, index) => (

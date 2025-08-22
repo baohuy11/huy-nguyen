@@ -30,7 +30,7 @@ const socialLinks = [
 const Footer = ({ links }) => (
   <footer className="bg-white dark:bg-gray-800 shadow-sm mt-auto">
     <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-      <p className="text-gray-600 dark:text-gray-400">&copy; 2025 Nguyen Phung Bao Huy. All rights reserved.</p>
+      <p className="text-lg text-gray-600 dark:text-gray-400">&copy; 2025 Nguyen Phung Bao Huy. All rights reserved.</p>
       <div className="flex space-x-4">
         {links.map(link => (
           <a
@@ -40,7 +40,7 @@ const Footer = ({ links }) => (
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-700 dark:hover:text-white"
           >
-            {React.createElement(link.icon, { size: 24 })}
+            {React.createElement(link.icon, { size: 28 })}
           </a>
         ))}
       </div>

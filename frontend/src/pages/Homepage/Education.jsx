@@ -1,62 +1,54 @@
 import React from 'react';
 import { Users, Briefcase, Heart, Layers, MoreHorizontal } from 'lucide-react';
 
+const EducationSection = ({ icon, title, children }) => (
+  <div>
+    <h3 className="flex items-center text-xl font-semibold mb-2">
+      {React.createElement(icon, { className: "mr-2" })}
+      {title}
+    </h3>
+    <div className="list-disc list-inside text-gray-600 dark:text-gray-400">
+      {children}
+    </div>
+  </div>
+);
+
 export default function Education() {
   return (
     <div className="space-y-8">
-      {/* Affiliation */}
-      <div>
-        <h3 className="flex items-center text-xl font-semibold mb-2">
-          <Users className="mr-2" /> Affiliation
-        </h3>
-        <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+      <EducationSection icon={Users} title="Affiliation">
+        <ul>
           <li>Institute of Science Tokyo, 3rd year (Science and Engineering)</li>
           <li>Digital Creation Club traP</li>
           <li>AIO Vietnam 2025</li>
         </ul>
-      </div>
+      </EducationSection>
 
-      {/* Working experience */}
-      <div>
-        <h3 className="flex items-center text-xl font-semibold mb-2">
-          <Briefcase className="mr-2" /> Working experience
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400">None</p>
-      </div>
+      <EducationSection icon={Briefcase} title="Working experience">
+        <p>None</p>
+      </EducationSection>
 
-      {/* Interests */}
-      <div>
-        <h3 className="flex items-center text-xl font-semibold mb-2">
-          <Heart className="mr-2" /> Interests
-        </h3>
-        <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+      <EducationSection icon={Heart} title="Interests">
+        <ul>
           <li>Large Language Models</li>
           <li>Machine Translation</li>
           <li>Reinforcement Learning</li>
           <li>Natural Language Processing</li>
           <li>Computer Vision</li>
         </ul>
-      </div>
+      </EducationSection>
 
-      {/* Technology stack */}
-      <div>
-        <h3 className="flex items-center text-xl font-semibold mb-2">
-          <Layers className="mr-2" /> Technology stack
-        </h3>
-        <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+      <EducationSection icon={Layers} title="Technology stack">
+        <ul>
           <li><strong>Languages:</strong> Python, JavaScript, TypeScript, C++</li>
           <li><strong>Frameworks:</strong> PyTorch, TensorFlow, React, Node.js</li>
           <li><strong>Tools:</strong> Git, Docker, Kubernetes</li>
         </ul>
-      </div>
+      </EducationSection>
 
-      {/* Other */}
-      <div>
-        <h3 className="flex items-center text-xl font-semibold mb-2">
-          <MoreHorizontal className="mr-2" /> Other
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400"></p>
-      </div>
+      <EducationSection icon={MoreHorizontal} title="Other">
+        <p></p>
+      </EducationSection>
     </div>
   );
 }

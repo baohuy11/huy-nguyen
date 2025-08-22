@@ -1,46 +1,48 @@
-import { ExternalLink, Calendar, ArrowUp } from 'lucide-react';
 import Education from './Education.jsx';
 
-export default function Home() {{
+const Introduction = () => (
+  <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
+    <p className="text-lg text-gray-800 dark:text-gray-300">
+      I am a pre-final year student, studying Artificial Intelligence, with a focus on Machine Learning, Deep Learning, and Large Language Models.
+    </p>
+    <p className="text-lg text-gray-800 dark:text-gray-300 mt-4">
+      I am passionate about reading books and research papers in my field.
+    </p>
+    <p className="text-lg text-gray-800 dark:text-gray-300 mt-4">
+      My goal is to become an AI Engineer or a researcher in Artificial Intelligence.
+    </p>
+  </div>
+);
+
+const Section = ({ title, children }) => (
+  <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{title}</h3>
+    {children}
+  </div>
+);
+
+export default function Home() {
   return (
     <div className="space-y-8">
-      {/* Bottom: Introduction */}
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-        <p className="text-lg text-gray-800 dark:text-gray-300">
-          I am a pre-final year student, studying Artificial Intelligence, with a focus on Machine Learning, Deep Learning, and Large Language Models.
-        </p>
-        <p className="text-lg text-gray-800 dark:text-gray-300 mt-4">
-          I am passionate about reading books and research papers in my field.
-        </p>
-        <p className="text-lg text-gray-800 dark:text-gray-300 mt-4">
-          My goal is to become an AI Engineer or a researcher in Artificial Intelligence.
-        </p>
-      </div>
+      <Introduction />
 
       <div className="space-y-8 max-w-5xl mx-auto">
-        {/* Second Block: Background */}
-        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Background</h3>
-          <div className="mt-4">
-            <Education />
-          </div>
-        </div>
+        <Section title="Background">
+          <Education />
+        </Section>
 
-        {/* Third Block: Articles (Blogs) */}
-        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Blogs</h3>
+        <Section title="Blogs">
           <p className="text-gray-600 dark:text-gray-400">
             I am passionate about sharing my knowledge and insights with the community. I plan to write articles on various topics related to AI, including tutorials, research summaries, and opinion pieces. Stay tuned for my upcoming blog posts!
           </p>
-        </div>
-      </div>
+        </Section>
 
-      {/* Fourth Block: Works */}
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Projects</h3>
-        <p className="text-gray-600 dark:text-gray-400">
-          I am constantly working on new projects to apply my skills and learn new things. My portfolio showcases a range of projects, from small-scale experiments to larger, more complex applications. I am always open to collaboration and new ideas, so feel free to reach out if you have a project in mind.
-        </p>
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Projects</h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            I am constantly working on new projects to apply my skills and learn new things. My portfolio showcases a range of projects, from small-scale experiments to larger, more complex applications. I am always open to collaboration and new ideas, so feel free to reach out if you have a project in mind.
+          </p>
+        </div>
       </div>
 
       {/* Fifth Block: Achievements */}
@@ -64,4 +66,4 @@ export default function Home() {{
     */}
     </div>
   );
-}}
+}

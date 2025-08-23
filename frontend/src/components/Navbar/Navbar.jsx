@@ -3,7 +3,6 @@ import React from 'react';
 // Helper component for the navigation links
 const NavLink = ({ pageName, currentPage, setCurrentPage, children }) => (
   <a
-    href="#"
     onClick={() => setCurrentPage(pageName)}
     className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
       currentPage === pageName
@@ -27,7 +26,10 @@ export default function Navbar({ currentPage, setCurrentPage }) {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left side: Your name or brand */}
         <div className="flex items-center">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
+          <h1
+            className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight cursor-pointer"
+            onClick={() => setCurrentPage('homepage')}
+          >
             Huy Nguyen
           </h1>
         </div>

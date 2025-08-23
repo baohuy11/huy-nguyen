@@ -1,4 +1,3 @@
-import Education from './Education.jsx';
 import { User, GraduationCap, Briefcase, BookOpen, Code, Award, Sparkles } from 'lucide-react';
 
 const Introduction = () => (
@@ -30,7 +29,7 @@ const Section = ({ title, children }) => (
   </div>
 );
 
-export default function Home() {
+export default function Home({ setCurrentPage }) {
   return (
     <div className="space-y-8">
       <div className="max-w-5xl mx-auto">
@@ -123,9 +122,19 @@ export default function Home() {
             <Code className="mr-2" /> Projects
           </h3>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-            <p className="text-xl text-gray-600 dark:text-gray-400">
-              I am constantly working on new projects to apply my skills and learn new things. My portfolio showcases a range of projects, from small-scale experiments to larger, more complex applications. I am always open to collaboration and new ideas, so feel free to reach out if you have a project in mind.
-            </p>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Paper Implementations</h3>
+              <p className="text-base text-gray-500 dark:text-gray-400 mt-2">August 23, 2025</p>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mt-4">I have created a repository consisting of my implementations of AI/ML paper(s) from domains ranging from NLP to Computer Vision...</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="bg-indigo-100 text-indigo-800 text-base font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">Python</span>
+                <span className="bg-indigo-100 text-indigo-800 text-base font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">PyTorch</span>
+              </div>
+              <a href="https://github.com/baohuy11/paper-implementations" className="text-lg text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 font-semibold mt-6 inline-block">View Project &rarr;</a>
+            </div>
+            <div className="text-right mt-4">
+              <a onClick={() => setCurrentPage('works')} className="cursor-pointer text-lg text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 font-semibold">More &rarr;</a>
+            </div>
           </div>
         </div>
 

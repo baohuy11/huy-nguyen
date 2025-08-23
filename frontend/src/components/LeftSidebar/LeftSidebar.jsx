@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserProfile = {
   name: 'NGUYEN PHUNG BAO HUY',
-  description: 'NLP | Interested in RL Reasoning in LLMs and Multimodal LLMs | Exploring the intersection of Research and Engineering',
+  description: 'Interested in RL Reasoning in LLMs and Multimodal LLMs | Exploring the intersection of Research and Engineering',
   avatar: 'https://avatars.githubusercontent.com/u/131153339?v=4',
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import LeftSidebar from '../LeftSidebar/LeftSidebar';
+import CompactAboutMe from '../CompactAboutMe/CompactAboutMe';
 import { useTheme } from '../../contexts/ThemeContext';
 import { Github, Linkedin, Twitter, Facebook } from 'lucide-react';
 
@@ -52,11 +53,18 @@ export default function Layout({ currentPage, setCurrentPage, children }) {
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme} font-sans antialiased text-gray-800 flex flex-col min-h-screen`}>
+    <div class={`${theme} font-sans antialiased text-gray-800 flex flex-col min-h-screen`}>
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <main className="container mx-auto px-6 pt-24 pb-8 flex-grow">
         <div className="flex justify-between space-x-8">
-          <div className="w-64 sticky top-24 self-start">
+          {/* Compact About Me for small screens flex justify-between space-x-8 */}
+          {/*
+          <div>
+            <CompactAboutMe />
+          </div>
+          */}
+          {/* Left Sidebar for medium and larger screens w-64 sticky top-24 self-start */}
+          <div className="hidden md:block w-64 sticky top-24 self-start">
             <LeftSidebar socialLinks={socialLinks} />
           </div>
           <div className="flex-grow">

@@ -7,7 +7,7 @@ const Introduction = () => (
     </p>
     <ul className="list-disc list-inside text-xl text-gray-800 dark:text-gray-300 mt-4 space-y-2">
       <li>
-        I am a pre-final year student studing Computer Science focus on ML/DL and LLMs.
+        I am a pre-final year student studing Computer Science focus on AI/ML and LLMs.
       </li>
       <li>
         Build and fine-tune LLMs; re-implement classic AI/ML papers from scratch.
@@ -46,10 +46,10 @@ export default function Home({ setCurrentPage }) {
           </h3>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
             <p className="text-xl font-semibold text-gray-900 dark:text-white">
-              Institute of Science Tokyo, Japan 2023-2027
+              Institute of Science Tokyo, Japan
             </p>
             <p className="text-base text-gray-600 dark:text-gray-400 mt-1">
-              Undergraduate 3 years
+              2023-2027
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Home({ setCurrentPage }) {
           </h3>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              I am passionate about sharing my knowledge and insights with the community. I plan to write articles on various topics related to AI, including tutorials, research summaries, and opinion pieces. Stay tuned for my upcoming blog posts!
+              Will write something in the future.
             </p>
           </div>
         </div>

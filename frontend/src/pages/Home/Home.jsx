@@ -1,6 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { User, GraduationCap, Briefcase, BookOpen, Code, Award, Sparkles } from 'lucide-react';
-import './Home.css'
+import { fetchPosts } from '../../utils/blogUtils'; // Import fetchPosts
+import BlogPostCard from '../../components/BlogPostCard/BlogPostCard'; // Import BlogPostCard
+import './Home.css';
 
 const Introduction = () => (
   <div className="card">
@@ -34,6 +37,25 @@ const Section = ({ title, icon, children }) => (
 );
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        const fetchedPosts = await fetchPosts();
+        setPosts(fetchedPosts.slice(0, 4)); // Get only the first 4 posts
+      } catch (err) {
+        setError('Failed to load blog posts for homepage.');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPosts();
+  }, []);
+
   return (
     <div className="home-container">
       <div className="content-wrapper">
@@ -101,10 +123,24 @@ export default function Home() {
           </p>
         </Section>
 
+        {/* New Blogs Section */}
         <Section title="Blogs" icon={<BookOpen className="icon" />}>
-          <p className="empty-content">
-            Will write something in the future.
-          </p>
+          {loading ? (
+            <div>Loading latest blog posts...</div>
+          ) : error ? (
+            <div style={{ color: 'red' }}>{error}</div>
+          ) : posts.length === 0 ? (
+            <div>No recent blog posts found.</div>
+          ) : (
+            <div className="homepage-blog-grid"> {/* New class for grid */}
+              {posts.map(post => (
+                <BlogPostCard key={post.slug} post={post} />
+              ))}
+            </div>
+          )}
+          <div className="more-link-container">
+            <Link to="/blogs" className="more-link">More Blogs &rarr;</Link>
+          </div>
         </Section>
 
         <Section title="Projects" icon={<Code className="icon" />}>

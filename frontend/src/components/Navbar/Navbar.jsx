@@ -56,7 +56,7 @@ export default function Navbar() {
               {link.text}
             </NavLink>
           ))}
-          <a href="/NGUYEN-PHUNG-BAO-HUY-RESUME.pdf" target="_blank" rel="noopener noreferrer" className="cv-link" onClick={closeMobileMenu}>
+          <a href="/nguyenphungbaohuy_resume.pdf" target="_blank" rel="noopener noreferrer" className="cv-link" onClick={closeMobileMenu}>
             CV
           </a>
         </div>

@@ -304,3 +304,16 @@
     color: #c7d2fe;
   }
 }
+
+.homepage-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+  gap: 2rem; /* Space between cards */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .homepage-blog-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}

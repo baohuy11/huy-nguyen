@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { getPosts, getPostBySlug } from '../../utils/blogUtils';
+import { fetchPosts, getPostBySlug } from '../../utils/blogUtils';
 import './BlogPostPage.css';
 
 export default function BlogPostPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const post = getPostBySlug(slug);
-  const posts = getPosts();
-  const postIndex = posts.findIndex(p => p.slug === slug);
+  const [post, setPost] = useState(null);
+  const [posts, setPosts] = useState([]); // To get prev/next posts
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (!post) {
-    return <div>Post not found!</div>;
+  useEffect(() => {
+    const loadPostData = async () => {
+      try {
+        const allPosts = await fetchPosts();
+        setPosts(allPosts); // Set all posts for navigation
+        const currentPost = allPosts.find(p => p.slug === slug);
+        setPost(currentPost);
+      } catch (err) {
+        setError('Failed to load blog post.');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPostData();
+  }, [slug]); // Re-run when slug changes
+
+  if (loading) {
+    return <div className="blog-post-page">Loading blog post...</div>;
   }
 
+  if (error) {
+    return <div className="blog-post-page" style={{ color: 'red' }}>{error}</div>;
+  }
+
+  if (!post) {
+    return <div className="blog-post-page">Post not found!</div>;
+  }
+
+  const postIndex = posts.findIndex(p => p.slug === slug);
   const prevPost = postIndex > 0 ? posts[postIndex - 1] : null;
   const nextPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null;
 

@@ -1,0 +1,88 @@
+/* Basic styling for the blog post card */
+.blog-post-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-post-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  color: #333;
+}
+
+.blog-post-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0rem;
+}
+
+.blog-post-excerpt {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0rem;
+}
+
+.blog-post-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto; /* Pushes the link to the bottom */
+}
+
+.blog-post-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .blog-post-card {
+    background-color: #2d2d2d;
+    border-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .blog-post-title {
+    color: #eee;
+  }
+  .blog-post-date,
+  .blog-post-excerpt {
+    color: #bbb;
+  }
+  .blog-post-link {
+    color: #88bbee;
+  }
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem; /* Add some space below tags */
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  white-space: nowrap; /* Prevent tags from breaking */
+}
+
+/* Dark mode for tags */
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background-color: #312e81;
+    color: #a5b4fc;
+  }
+}

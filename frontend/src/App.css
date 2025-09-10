@@ -1,0 +1,47 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body-wrapper {
+  display: flex;
+  flex: 1; /* Make it grow to fill available space */
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem;
+  margin-left: 22rem; /* Sidebar width */
+  margin-top: 3rem;
+}
+
+.content-area {
+  width: 100%;
+}
+
+/* Styles for the fixed sidebar are in Sidebar.css, but we control its container here */
+.sidebar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding-top: 0rem; /* To be below the navbar */
+  z-index: 40; /* Below navbar */
+}
+
+@media (max-width: 1024px) {
+  .body-wrapper {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .sidebar-container {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}

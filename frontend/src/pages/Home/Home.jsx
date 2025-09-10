@@ -1,0 +1,129 @@
+import { Link } from 'react-router-dom';
+import { User, GraduationCap, Briefcase, BookOpen, Code, Award, Sparkles } from 'lucide-react';
+import './Home.css'
+
+const Introduction = () => (
+  <div className="card">
+    <p className="intro-greeting">
+      Hi there, I am Huy!
+    </p>
+    <ul className="intro-list">
+      <li>
+        I am a pre-final year student studing Computer Science focus on AI/ML and LLMs.
+      </li>
+      <li>
+        Build and fine-tune LLMs; re-implement classic AI/ML papers from scratch.
+      </li>
+      <li>
+        Focus areas: Multimodal LLMs (vision, language) and RL for pre/post training paradigms.
+      </li>
+      <li>
+        Looking for: Research Internship (academia / industrial) positions in my areas of interest. Open to AI Engineer roles for development of pipelines, RAGs, Fine Tuning and other AI/ML related projects.
+      </li>
+    </ul>
+  </div>
+);
+
+const Section = ({ title, icon, children }) => (
+  <div>
+    <h3 className="main-section-title">
+      {icon} {title}
+    </h3>
+    <div className="card">{children}</div>
+  </div>
+);
+
+export default function Home() {
+  return (
+    <div className="home-container">
+      <div className="content-wrapper">
+        <h3 className="main-section-title">
+          <User className="icon" /> About me
+        </h3>
+        <Introduction />
+      </div>
+
+      <div className="sections-container">
+        <Section title="Education" icon={<GraduationCap className="icon" />}>
+          <p className="education-school">
+            Institute of Science Tokyo, Japan
+          </p>
+          <p className="education-time">
+            2023-2027
+          </p>
+        </Section>
+
+        <Section title="Skills" icon={<Sparkles className="icon" />}>
+          <p className="skills-category">
+            Programming languages
+          </p>
+          <div className="skills-tags">
+            <span className="skill-tag">Python</span>
+            <span className="skill-tag">C</span>
+            <span className="skill-tag">C++</span>
+          </div>
+
+          <p className="skills-category">
+            Tools & Frameworks
+          </p>
+          <div className="skills-tags">
+            <span className="skill-tag">PyTorch</span>
+            <span className="skill-tag">Docker</span>
+            <span className="skill-tag">LangChain</span>
+            <span className="skill-tag">Streamlit</span>
+            <span className="skill-tag">Git</span>
+            <span className="skill-tag">GitHub</span>
+            <span className="skill-tag">Firebase</span>
+            <span className="skill-tag">FAISS</span>
+            <span className="skill-tag">HuggingFace</span>
+          </div>
+
+          <p className="skills-category">
+            Experiences
+          </p>
+          <ul className="experiences-list">
+            <li>Data Structure & Algorithm, Competitive programming using C/C++</li>
+            <li>Build and finetune LLM, RAG</li>
+            <li>Build model using Pytorch</li>
+            <li>And other Machine Learning knowledge</li>
+          </ul>
+        </Section>
+
+        <Section title="Working experience" icon={<Briefcase className="icon" />}>
+          <p className="empty-content">
+            None
+          </p>
+        </Section>
+
+        <Section title="Achievements" icon={<Award className="icon" />}>
+          <p className="empty-content">
+            None
+          </p>
+        </Section>
+
+        <Section title="Blogs" icon={<BookOpen className="icon" />}>
+          <p className="empty-content">
+            Will write something in the future.
+          </p>
+        </Section>
+
+        <Section title="Projects" icon={<Code className="icon" />}>
+          <div className="project-card">
+            <h3 className="project-title">Paper Implementations</h3>
+            <p className="project-date">August 23, 2025</p>
+            <p className="project-description">I have created a repository consisting of my implementations of AI/ML paper(s) from domains ranging from NLP to Computer Vision...</p>
+            <div className="project-tags">
+              <span className="skill-tag">Python</span>
+              <span className="skill-tag">PyTorch</span>
+            </div>
+            <a href="https://github.com/baohuy11/paper-implementations" className="project-link">View Project &rarr;</a>
+          </div>
+          <div className="more-link-container">
+            <Link to="/projects" className="more-link">More &rarr;</Link>
+          </div>
+        </Section>
+
+      </div>
+    </div>
+  );
+}

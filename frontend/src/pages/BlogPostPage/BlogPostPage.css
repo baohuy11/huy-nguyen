@@ -82,3 +82,42 @@
 .prev-post:hover, .next-post:hover {
   text-decoration: underline;
 }
+
+@media (prefers-color-scheme: dark) {
+  .back-button {
+    color: #a5b4fc;
+  }
+
+  .blog-post-header {
+    border-bottom-color: #374151;
+  }
+
+  .blog-title {
+    color: white;
+  }
+
+  .blog-meta {
+    color: #9ca3af;
+  }
+
+  .tag {
+    background-color: #312e81;
+    color: #a5b4fc;
+  }
+
+  .blog-description {
+    color: #d1d5db;
+  }
+
+  .post-navigation {
+    border-top-color: #374151;
+  }
+
+  .prev-post, .next-post {
+    color: #a5b4fc;
+  }
+
+  .blog-post-content article {
+    color: #d1d5db;
+  }
+}

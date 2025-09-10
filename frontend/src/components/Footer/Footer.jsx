@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       <SocialLinks links={socialLinksData} />
-      <p>&copy; {new Date().getFullYear()} Huy Nguyen. All Rights Reserved.</p>
+      <p className="footer-text">&copy; {new Date().getFullYear()} Huy Nguyen. All Rights Reserved.</p>
     </footer>
   );
 }

@@ -47,10 +47,6 @@
   .brand-title {
     color: white;
   }
-  
-  .brand-title:hover {
-    color: #a5b4fc;
-  }
 }
 
 /* Navigation Links Container */
@@ -117,16 +113,17 @@
 .cv-link:hover {
   color: #4f46e5;
   background-color: #f3f4f6;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
   .cv-link {
     color: #d1d5db;
   }
-  
   .cv-link:hover {
     background-color: #374151;
     color: #a5b4fc;
+    text-decoration: none;
   }
 }
 
@@ -162,7 +159,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 850px) {
+@media (max-width: 910px) {
   .navbar-container {
     padding: 0.75rem 1rem;
   }
@@ -191,6 +188,7 @@
 
   .navbar-links.mobile-menu-open {
     display: flex;
+    color: #21262d;
   }
   
   .hamburger-menu {

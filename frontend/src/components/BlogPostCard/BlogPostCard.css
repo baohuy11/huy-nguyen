@@ -46,8 +46,7 @@
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   .blog-post-card {
-    background-color: #2d2d2d;
-    border-color: #444;
+    background-color: #1f2937;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   .blog-post-title {

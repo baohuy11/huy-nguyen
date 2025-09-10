@@ -33,6 +33,7 @@
 @media (prefers-color-scheme: dark) {
   .card {
     background-color: #1f2937;
+    border-color: white;
   }
 }
 
@@ -81,23 +82,26 @@
 
 @media (prefers-color-scheme: dark) {
   .intro-greeting {
-    color: #d1d5db;
+    color: #ffffff;
   }
 }
 
 .intro-list {
   padding-left: 0rem;
   font-size: 2rem;
-  color: #1f2937;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+.intro-list-item {
+  color: #1f2937;
+}
+
 @media (prefers-color-scheme: dark) {
-  .intro-list {
-    color: #d1d5db;
+  .intro-list-item {
+    color: white;
   }
 }
 
@@ -171,16 +175,19 @@
 .experiences-list {
   padding-left: 0rem;
   font-size: 2rem;
-  color: #1f2937;
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
+.experiences-list-item {
+  color: #1f2937;
+}
+
 @media (prefers-color-scheme: dark) {
-  .experiences-list {
-    color: #d1d5db;
+  .experiences-list-item {
+    color: white;
   }
 }
 

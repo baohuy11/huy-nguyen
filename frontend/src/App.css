@@ -49,3 +49,9 @@
     margin-bottom: 2rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    background-color: #21262d;
+  }
+}

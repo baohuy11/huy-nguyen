@@ -13,16 +13,16 @@ const Introduction = () => (
       Hi there, I am Huy!
     </p>
     <ul className="intro-list">
-      <li>
+      <li className="intro-list-item">
         I am a pre-final year student studing Computer Science focus on AI/ML and LLMs.
       </li>
-      <li>
+      <li className="intro-list-item">
         Build and fine-tune LLMs; re-implement classic AI/ML papers from scratch.
       </li>
-      <li>
+      <li className="intro-list-item">
         Focus areas: Multimodal LLMs (vision, language) and RL for pre/post training paradigms.
       </li>
-      <li>
+      <li className="intro-list-item">
         Looking for: Research Internship (academia / industrial) positions in my areas of interest. Open to AI Engineer roles for development of pipelines, RAGs, Fine Tuning and other AI/ML related projects.
       </li>
     </ul>
@@ -106,10 +106,10 @@ export default function Home() {
             Experiences
           </p>
           <ul className="experiences-list">
-            <li>Data Structure & Algorithm, Competitive programming using C/C++</li>
-            <li>Build and finetune LLM, RAG</li>
-            <li>Build model using Pytorch</li>
-            <li>And other Machine Learning knowledge</li>
+            <li className="experiences-list-item">Data Structure & Algorithm, Competitive programming using C/C++</li>
+            <li className="experiences-list-item">Build and finetune LLM, RAG</li>
+            <li className="experiences-list-item">Build model using Pytorch</li>
+            <li className="experiences-list-item">And other Machine Learning knowledge</li>
           </ul>
         </Section>
 

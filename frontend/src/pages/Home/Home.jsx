@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { User, GraduationCap, Briefcase, BookOpen, Code, Award, Sparkles } from 'lucide-react';
 import { fetchPosts } from '../../utils/blogUtils'; // Import fetchPosts
 import BlogPostCard from '../../components/BlogPostCard/BlogPostCard'; // Import BlogPostCard
+import { projects } from '../../config/content'; // Import projects data
+import ProjectCard from '../../components/ProjectCard/ProjectCard'; // Import ProjectCard
 import './Home.css';
 
 const Introduction = () => (
@@ -81,8 +83,8 @@ export default function Home() {
           </p>
           <div className="skills-tags">
             <span className="skill-tag">Python</span>
-            <span className="skill-tag">C</span>
-            <span className="skill-tag">C++</span>
+            <span className="skill-tag">Unix/Linux</span>
+            <span className="skill-tag">C/C++</span>
           </div>
 
           <p className="skills-category">
@@ -123,7 +125,7 @@ export default function Home() {
           </p>
         </Section>
 
-        {/* New Blogs Section */}
+        {/* Blogs Section */}
         <Section title="Blogs" icon={<BookOpen className="icon" />}>
           {loading ? (
             <div>Loading latest blog posts...</div>
@@ -143,19 +145,15 @@ export default function Home() {
           </div>
         </Section>
 
+        {/* Projects Section */}
         <Section title="Projects" icon={<Code className="icon" />}>
-          <div className="project-card">
-            <h3 className="project-title">Paper Implementations</h3>
-            <p className="project-date">August 23, 2025</p>
-            <p className="project-description">I have created a repository consisting of my implementations of AI/ML paper(s) from domains ranging from NLP to Computer Vision...</p>
-            <div className="project-tags">
-              <span className="skill-tag">Python</span>
-              <span className="skill-tag">PyTorch</span>
-            </div>
-            <a href="https://github.com/baohuy11/paper-implementations" className="project-link">View Project &rarr;</a>
+          <div className="homepage-blog-grid"> {/* Reuse blog grid class */}
+            {projects.slice(0, 4).map(project => (
+              <ProjectCard key={project.title} project={project} type="short" />
+            ))}
           </div>
           <div className="more-link-container">
-            <Link to="/projects" className="more-link">More &rarr;</Link>
+            <Link to="/projects" className="more-link">More Projects &rarr;</Link>
           </div>
         </Section>
 

@@ -248,4 +248,39 @@ export const achivementContent ={
     vi:{
         description: "Chưa có",
     }
-}
+};
+
+export const projects = [
+  {
+    title: 'Paper Implementations',
+    description: 'I have created a repository consisting of my implementations of AI/ML paper(s) from domains ranging from ML to LLMs, showcasing my eagerness to learn and explore the diverse fields to much deeper extent, whilst demonstrating my abilities to replicate the papers from scratch.',
+    short_description:'Bringing AI research papers to life with from-scratch code implementations.',
+    link: 'https://github.com/baohuy11/paper-implementations',
+    tags: ['Python', 'PyTorch'],
+    date: 'August 23, 2025',
+  },
+  {
+    title: 'LLMs-from-scratch',
+    description: 'A hands-on project building Large Language Models from the ground up. This repository explores the core components of the Transformer architecture to demonstrate a foundational understanding of how modern language models work.',
+    short_description:'Building a functional Large Language Model from scratch to understand its core architecture.',
+    link: 'https://github.com/baohuy11/LLMs-from-scratch',
+    tags: ['Python', 'PyTorch'],
+    date: 'August 23, 2025',
+  },
+  {
+    title: 'Reinforcement-Learning',
+    description: 'A repository dedicated to implementing key Reinforcement Learning algorithms. It features intelligent agents designed to master tasks by interacting with environments and maximizing rewards.',
+    short_description:'Implementing algorithms to train intelligent intelligent agents that learn through trial and error.',
+    link: 'https://github.com/baohuy11/Reinforcement-Learning',
+    tags: ['Python', 'PyTorch'],
+    date: 'August 23, 2025',
+  },
+  {
+    title: 'Generative-AI',
+    description: 'This collection of projects explores the fascinating world of generative AI. It includes implementations of various models, such as GANs and VAEs, to create new content, demonstrating my skills in building creative and innovative AI systems.',
+    short_description:'Building and training models like GANs and VAEs to generate new and original content.',
+    link: 'https://github.com/baohuy11/Generative-AI',
+    tags: ['Python', 'PyTorch'],
+    date: 'August 23, 2025',
+  },
+];

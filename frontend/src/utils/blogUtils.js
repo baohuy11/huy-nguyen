@@ -1,11 +1,12 @@
 import { parse } from 'yaml';
 
-const postFiles = [
-  'M04W01.md',
-  'M04W02.md',
-  'M04W03.md',
-  'M04W04.md'
-];
+// This function now dynamically gets the file paths using Vite's import.meta.glob.
+// IMPORTANT: For this to work, the 'posts' directory needs to be at '/src/assets/posts'.
+const getPostPaths = () => {
+  // The paths are relative to the project root.
+  const postModules = import.meta.glob('/src/assets/posts/*.md');
+  return Object.keys(postModules);
+};
 
 let cachedPosts = null;
 
@@ -40,11 +41,13 @@ export const fetchPosts = async () => {
     return cachedPosts;
   }
 
-  const postsPromises = postFiles.map(async (filename) => {
-    const response = await fetch(`/posts/${filename}`);
+  const postPaths = getPostPaths();
+
+  const postsPromises = postPaths.map(async (path) => {
+    const response = await fetch(path);
     
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
+      throw new Error(`HTTP error! status: ${response.status} for ${path}`);
     }
     
     const rawContent = await response.text();
@@ -57,6 +60,7 @@ export const fetchPosts = async () => {
     // Parse metadata from lines 1-14
     const data = parseMetadata(cleanedContent);
     
+    const filename = path.split('/').pop();
     const slug = filename.replace('.md', '').toLowerCase();
 
     return {
@@ -69,7 +73,7 @@ export const fetchPosts = async () => {
   const posts = await Promise.all(postsPromises);
 
   // Sort posts by the 'order' property in the frontmatter
-  const sortedPosts = posts.sort((a, b) => (a.order || 0) - (b.order || 0));
+  const sortedPosts = posts.sort((a, b) => (b.order || 0) - (a.order || 0));
   
   cachedPosts = sortedPosts;
   return sortedPosts;

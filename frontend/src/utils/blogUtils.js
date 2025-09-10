@@ -1,12 +1,5 @@
 import { parse } from 'yaml';
-
-// This function now dynamically gets the file paths using Vite's import.meta.glob.
-// IMPORTANT: For this to work, the 'posts' directory needs to be at '/src/assets/posts'.
-const getPostPaths = () => {
-  // The paths are relative to the project root.
-  const postModules = import.meta.glob('/src/assets/posts/*.md');
-  return Object.keys(postModules);
-};
+import postFiles from '../posts-list.json'; // Import the generated list
 
 let cachedPosts = null;
 
@@ -32,7 +25,7 @@ const parseMetadata = (rawText) => {
       metadata[trimmedKey] = trimmedValue;
     }
   }
-  console.log('Parsed Metadata:', metadata);
+  // console.log('Parsed Metadata:', metadata);
   return metadata;
 };
 
@@ -41,13 +34,12 @@ export const fetchPosts = async () => {
     return cachedPosts;
   }
 
-  const postPaths = getPostPaths();
-
-  const postsPromises = postPaths.map(async (path) => {
-    const response = await fetch(path);
+  const postsPromises = postFiles.map(async (filename) => {
+    // Fetch from the public/posts directory
+    const response = await fetch(`/posts/${filename}`);
     
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status} for ${path}`);
+      throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
     }
     
     const rawContent = await response.text();
@@ -60,7 +52,6 @@ export const fetchPosts = async () => {
     // Parse metadata from lines 1-14
     const data = parseMetadata(cleanedContent);
     
-    const filename = path.split('/').pop();
     const slug = filename.replace('.md', '').toLowerCase();
 
     return {

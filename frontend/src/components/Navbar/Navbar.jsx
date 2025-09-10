@@ -19,6 +19,7 @@ const navLinks = [
   { to: '/', text: 'Homepage' },
   { to: '/blogs', text: 'Blogs' },
   { to: '/projects', text: 'Projects' },
+  { to: '/test', text: 'Test' }, // New link for Test page
 ];
 
 export default function Navbar() {

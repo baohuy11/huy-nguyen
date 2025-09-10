@@ -6,10 +6,9 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Home from './pages/Home/Home';
 import Blogs from './pages/Blogs/Blogs';
 import Projects from './pages/Projects/Projects';
-
 import Footer from './components/Footer/Footer';
-
 import BlogPostPage from './pages/BlogPostPage/BlogPostPage';
+import Test from './pages/Test/Test'; // Import Test component
 
 function App() {
   const [currentPage, setCurrentPage] = useState('homepage');
@@ -26,6 +25,7 @@ function App() {
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/:slug" element={<BlogPostPage />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/test" element={<Test />} /> {/* New route for Test page */}
             </Routes>
           </div>
         </main>

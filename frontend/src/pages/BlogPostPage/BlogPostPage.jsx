@@ -63,7 +63,9 @@ export default function BlogPostPage() {
           </div>
           <p className="blog-description">{post.description}</p>
         </header>
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        <div className="markdown-container">
+          <ReactMarkdown className="markdown-content">{post.content}</ReactMarkdown>
+        </div>
       </article>
       <nav className="post-navigation">
         {prevPost ? (

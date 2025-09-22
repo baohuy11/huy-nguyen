@@ -54,15 +54,8 @@
   color: #374151;
 }
 
-.blog-post-content article {
+article.blog-post-content {
   line-height: 1.7;
-}
-
-.blog-post-content h1,
-.blog-post-content h2,
-.blog-post-content h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 .post-navigation {
@@ -83,6 +76,59 @@
   text-decoration: underline;
 }
 
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3,
+.markdown-container h4,
+.markdown-container h5,
+.markdown-container h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.markdown-container p {
+  margin-bottom: 1em;
+}
+
+.markdown-container a {
+  color: #3182ce;
+  text-decoration: underline;
+}
+
+.markdown-container code {
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.markdown-container pre {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.markdown-container pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+.markdown-container ul,
+.markdown-container ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.markdown-container blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1em;
+  margin-left: 0;
+  color: #6b7280;
+}
+
+/* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   .back-button {
     color: #a5b4fc;
@@ -117,7 +163,33 @@
     color: #a5b4fc;
   }
 
-  .blog-post-content article {
+  .markdown-container p,
+  .markdown-container ul,
+  .markdown-container ol,
+  .markdown-container li {
     color: #d1d5db;
+  }
+
+  .markdown-container strong {
+    color: white;
+  }
+
+  .markdown-container a {
+    color: #63b3ed;
+  }
+
+  .markdown-container code {
+    background-color: #2d3748;
+    color: #e2e8f0;
+  }
+
+  .markdown-container pre {
+    background-color: #1a202c;
+    color: #e2e8f0;
+  }
+
+  .markdown-container blockquote {
+    border-left-color: #4a5568;
+    color: #a0aec0;
   }
 }

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const postsDirectory = path.join(__dirname, '../frontend/public/posts');
+const postsDirectory = path.join(__dirname, '../blog_posts');
 const outputPath = path.join(__dirname, '../frontend/src/posts-list.json');
 
 const filenames = fs.readdirSync(postsDirectory);

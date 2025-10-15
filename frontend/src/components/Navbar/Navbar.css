@@ -8,11 +8,6 @@
   z-index: 50;
 }
 
-@media (prefers-color-scheme: dark) {
-  .navbar-header {
-    background-color: #1f2937;
-  }
-}
 
 .navbar-container {
   max-width: 1600px;
@@ -41,12 +36,6 @@
 
 .brand-title-link, .brand-title-link:hover {
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .brand-title {
-    color: white;
-  }
 }
 
 /* Navigation Links Container */
@@ -88,17 +77,6 @@
   background-color: #f3f4f6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .nav-link-inactive {
-    color: #d1d5db;
-  }
-  
-  .nav-link-inactive:hover {
-    background-color: #374151;
-    color: #a5b4fc;
-  }
-}
-
 /* CV Link Styles */
 .cv-link {
   padding: 0.5rem 1rem;
@@ -116,16 +94,6 @@
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .cv-link {
-    color: #d1d5db;
-  }
-  .cv-link:hover {
-    background-color: #374151;
-    color: #a5b4fc;
-    text-decoration: none;
-  }
-}
 
 /* Hamburger Menu */
 .hamburger-menu {
@@ -147,15 +115,6 @@
   background-color: #111827;
   border-radius: 10px;
   transition: all 0.3s linear;
-}
-
-@media (prefers-color-scheme: dark) {
-  .hamburger-line {
-    background-color: white;
-  }
-  .navbar-links.mobile-menu-open {
-    background-color: #1f2937;
-  }
 }
 
 /* Responsive Design */
@@ -211,3 +170,37 @@
     gap: 1rem;
   }
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+  .navbar-header {
+    background-color: #1f2937;
+  }
+
+  .brand-title {
+    color: white;
+  }
+    
+  .cv-link {
+    color: #d1d5db;
+  }
+  .cv-link:hover {
+    background-color: #374151;
+    color: #a5b4fc;
+    text-decoration: none;
+  }
+  .hamburger-line {
+    background-color: white;
+  }
+  .navbar-links.mobile-menu-open {
+    background-color: #1f2937;
+  }
+  .nav-link-inactive {
+    color: #d1d5db;
+  }
+  .nav-link-inactive:hover {
+    background-color: #374151;
+    color: #a5b4fc;
+  }
+}
+*/

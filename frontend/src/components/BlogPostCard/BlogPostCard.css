@@ -43,24 +43,6 @@
   text-decoration: underline;
 }
 
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .blog-post-card {
-    background-color: #1f2937;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  .blog-post-title {
-    color: #eee;
-  }
-  .blog-post-date,
-  .blog-post-excerpt {
-    color: #bbb;
-  }
-  .blog-post-link {
-    color: #88bbee;
-  }
-}
-
 .blog-tags {
   display: flex;
   flex-wrap: wrap;
@@ -79,9 +61,25 @@
 }
 
 /* Dark mode for tags */
+/*
 @media (prefers-color-scheme: dark) {
   .tag {
     background-color: #312e81;
     color: #a5b4fc;
   }
+  .blog-post-card {
+    background-color: #1f2937;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .blog-post-title {
+    color: #eee;
+  }
+  .blog-post-date,
+  .blog-post-excerpt {
+    color: #bbb;
+  }
+  .blog-post-link {
+    color: #88bbee;
+  }
 }
+*/

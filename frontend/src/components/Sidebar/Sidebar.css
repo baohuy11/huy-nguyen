@@ -27,15 +27,6 @@
   margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  .sidebar-container {
-    border-color: #374151;
-  }
-  .avatar-container {
-    background-color: #374151;
-  }
-}
-
 .avatar-image {
   width: 100%;
   height: 100%;
@@ -49,23 +40,11 @@
   margin-top: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .profile-name {
-    color: white;
-  }
-}
-
 .profile-description {
   font-size: 1.125rem;
   color: #374151;
   margin-top: 0.5rem;
   line-height: 1.6;
-}
-
-@media (prefers-color-scheme: dark) {
-  .profile-description {
-    color: #d1d5db;
-  }
 }
 
 /* Social Links Section */
@@ -85,12 +64,6 @@
 
 .social-link:hover {
   color: #374151;
-}
-
-@media (prefers-color-scheme: dark) {
-  .social-link:hover {
-    color: white;
-  }
 }
 
 /* Responsive Design */
@@ -168,3 +141,23 @@
     height: 1.5rem;
   }
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+  .sidebar-container {
+    border-color: #374151;
+  }
+  .avatar-container {
+    background-color: #374151;
+  }
+  .profile-name {
+    color: white;
+  }
+  .profile-description {
+    color: #d1d5db;
+  }
+  .social-link:hover {
+    color: white;
+  }
+}
+*/

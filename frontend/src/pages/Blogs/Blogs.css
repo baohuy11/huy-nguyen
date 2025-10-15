@@ -13,12 +13,6 @@
   color: #111827;
 }
 
-@media (prefers-color-scheme: dark) {
-  .blogs-title {
-    color: white;
-  }
-}
-
 .blog-posts-list {
   display: flex;
   flex-direction: column;
@@ -38,22 +32,10 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-@media (prefers-color-scheme: dark) {
-  .blog-post-card {
-    background-color: #1f2937;
-  }
-}
-
 .blog-post-title {
   font-size: 1.25rem;
   font-weight: 600;
   color: #111827;
-}
-
-@media (prefers-color-scheme: dark) {
-  .blog-post-title {
-    color: white;
-  }
 }
 
 .blog-post-date {
@@ -62,23 +44,11 @@
   margin-top: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .blog-post-date {
-    color: #9ca3af;
-  }
-}
-
 .blog-post-excerpt {
   font-size: 1rem;
   color: #374151;
   margin-top: 1rem;
   line-height: 1.7;
-}
-
-@media (prefers-color-scheme: dark) {
-  .blog-post-excerpt {
-    color: #d1d5db;
-  }
 }
 
 .blog-post-link {
@@ -95,7 +65,28 @@
   color: #3730a3;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
+  .blogs-title {
+    color: white;
+  }
+
+  .blog-post-card {
+    background-color: #1f2937;
+  }
+
+  .blog-post-title {
+    color: white;
+  }
+
+  .blog-post-date {
+    color: #9ca3af;
+  }
+
+  .blog-post-excerpt {
+    color: #d1d5db;
+  }
+
   .blog-post-link {
     color: #a5b4fc;
   }
@@ -104,6 +95,7 @@
     color: #c7d2fe;
   }
 }
+*/
 
 .cursor-pointer {
   cursor: pointer;

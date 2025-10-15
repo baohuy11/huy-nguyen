@@ -29,14 +29,6 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  .card {
-    background-color: #1f2937;
-    border-color: white;
-  }
-}
-
 /* Section Titles */
 .main-section-title {
   display: flex;
@@ -48,23 +40,11 @@
   color: #111827;
 }
 
-@media (prefers-color-scheme: dark) {
-  .main-section-title {
-    color: white;
-  }
-}
-
 .section-title {
   font-size: 1.875rem;
   font-weight: 600;
   color: #111827;
   margin-bottom: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .section-title {
-    color: white;
-  }
 }
 
 .icon {
@@ -80,12 +60,6 @@
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .intro-greeting {
-    color: #ffffff;
-  }
-}
-
 .intro-list {
   padding-left: 0rem;
   font-size: 2rem;
@@ -99,12 +73,6 @@
   color: #1f2937;
 }
 
-@media (prefers-color-scheme: dark) {
-  .intro-list-item {
-    color: white;
-  }
-}
-
 /* Education Styles */
 .education-school {
   font-size: 1.25rem;
@@ -112,22 +80,10 @@
   color: #111827;
 }
 
-@media (prefers-color-scheme: dark) {
-  .education-school {
-    color: white;
-  }
-}
-
 .education-time {
   font-size: 1rem;
   color: #4b5563;
   margin-top: 0.25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .education-time {
-    color: #9ca3af;
-  }
 }
 
 /* Skills Styles */
@@ -140,12 +96,6 @@
 
 .skills-category:first-child {
   margin-top: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  .skills-category {
-    color: white;
-  }
 }
 
 .skills-tags {
@@ -165,13 +115,6 @@
   border-radius: 9999px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .skill-tag {
-    background-color: #312e81;
-    color: #a5b4fc;
-  }
-}
-
 .experiences-list {
   padding-left: 0rem;
   font-size: 2rem;
@@ -185,22 +128,10 @@
   color: #1f2937;
 }
 
-@media (prefers-color-scheme: dark) {
-  .experiences-list-item {
-    color: white;
-  }
-}
-
 /* Empty Content */
 .empty-content {
   font-size: 1.25rem;
   color: #4b5563;
-}
-
-@media (prefers-color-scheme: dark) {
-  .empty-content {
-    color: #9ca3af;
-  }
 }
 
 /* Project Styles */
@@ -211,23 +142,12 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    background-color: #1f2937;
-  }
-}
-
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #111827;
 }
 
-@media (prefers-color-scheme: dark) {
-  .project-title {
-    color: white;
-  }
-}
 
 .project-date {
   font-size: 1rem;
@@ -235,11 +155,6 @@
   margin-top: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .project-date {
-    color: #9ca3af;
-  }
-}
 
 .project-description {
   font-size: 1.125rem;
@@ -247,11 +162,6 @@
   margin-top: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .project-description {
-    color: #d1d5db;
-  }
-}
 
 .project-tags {
   margin-top: 1rem;
@@ -274,15 +184,6 @@
   color: #3730a3;
 }
 
-@media (prefers-color-scheme: dark) {
-  .project-link {
-    color: #a5b4fc;
-  }
-  
-  .project-link:hover {
-    color: #c7d2fe;
-  }
-}
 
 .more-link-container {
   text-align: right;
@@ -302,16 +203,6 @@
   color: #3730a3;
 }
 
-@media (prefers-color-scheme: dark) {
-  .more-link {
-    color: #a5b4fc;
-  }
-  
-  .more-link:hover {
-    color: #c7d2fe;
-  }
-}
-
 .homepage-blog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
@@ -324,3 +215,85 @@
     grid-template-columns: 1fr; /* Single column on small screens */
   }
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+  .main-section-title {
+    color: white;
+  }
+
+  .section-title {
+    color: white;
+  }
+
+  .card {
+    background-color: #1f2937;
+    border-color: white;
+  }
+
+  .skill-tag {
+    background-color: #312e81;
+    color: #a5b4fc;
+  }
+
+  .intro-greeting {
+    color: #ffffff;
+  }
+
+  .intro-list-item {
+    color: white;
+  }
+
+  .education-school {
+    color: white;
+  }
+
+  .education-time {
+    color: #9ca3af;
+  }
+
+  .skills-category {
+    color: white;
+  }
+
+  .experiences-list-item {
+    color: white;
+  }
+
+  .empty-content {
+    color: #9ca3af;
+  }
+
+  .project-card {
+    background-color: #1f2937;
+  }
+
+  .project-title {
+    color: white;
+  }
+
+  .project-date {
+    color: #9ca3af;
+  }
+
+  .project-description {
+    color: #d1d5db;
+  }
+
+  .project-link {
+    color: #a5b4fc;
+  }
+  
+  .project-link:hover {
+    color: #c7d2fe;
+  }
+
+  .more-link {
+    color: #a5b4fc;
+  }
+  
+  .more-link:hover {
+    color: #c7d2fe;
+  }
+}
+*/

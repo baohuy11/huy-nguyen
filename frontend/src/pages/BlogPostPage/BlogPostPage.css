@@ -161,6 +161,7 @@ article.blog-post-content {
 
 
 /* Dark Mode Styles */
+/*
 @media (prefers-color-scheme: dark) {
   .back-button {
     color: #a5b4fc;
@@ -225,3 +226,4 @@ article.blog-post-content {
     color: #a0aec0;
   }
 }
+*/

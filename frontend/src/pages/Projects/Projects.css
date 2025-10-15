@@ -13,12 +13,6 @@
   color: #111827;
 }
 
-@media (prefers-color-scheme: dark) {
-  .projects-title {
-    color: white;
-  }
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr; /* Single column */
@@ -30,3 +24,11 @@
     grid-template-columns: 1fr; /* Single column on small screens */
   }
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+  .projects-title {
+    color: white;
+  }
+}
+*/

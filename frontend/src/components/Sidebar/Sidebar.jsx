@@ -39,7 +39,7 @@ const SocialLinks = ({ links }) => (
           aria-label={`Link to ${link.name} profile`}
           className="social-link"
         >
-          {IconComponent ? <IconComponent size={32} /> : null}
+          {IconComponent ? <IconComponent size={28} /> : null}
         </a>
       );
     })}

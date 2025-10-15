@@ -1,9 +1,9 @@
 /* LeftSidebar Component Styles */
 .sidebar-container {
-  top: 6rem;
-  left: 5rem;
+  top: 5rem;
+  left: 2rem;
   height: 100%;
-  width: 16rem;
+  width: 15rem;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -16,8 +16,8 @@
 }
 
 .avatar-container {
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   background-color: #e5e7eb;
   display: flex;
@@ -34,14 +34,14 @@
 }
 
 .profile-name {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #111827;
   margin-top: 1rem;
 }
 
 .profile-description {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #374151;
   margin-top: 0.5rem;
   line-height: 1.6;

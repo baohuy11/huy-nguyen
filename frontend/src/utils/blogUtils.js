@@ -36,7 +36,7 @@ export const fetchPosts = async () => {
 
   const postsPromises = postFiles.map(async (filename) => {
     // Fetch from the public/posts directory
-    const response = await fetch(`/posts/${filename}`);
+    const response = await fetch(`/blog_posts/${filename}`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
